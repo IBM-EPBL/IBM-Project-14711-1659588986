@@ -4,3 +4,22 @@ Sprint 1 Tasks:
 3. Backend Integration using Flask - main.py
 4. Dataset Collection - flight_features_final.csv
 5. Dataset Preprocessing - Flight_delay_Preprocessing.ibynb
+
+Code folder Contains - frontend and backend files:
+Code
+--static
+  --img
+    --airplane1.jpg
+    --flight2.png
+  --js
+    --loginj.js
+    --searchj.js
+  --styles
+      --home.css
+      --logins.css
+      --search_style.css
+--templates
+  --home.html
+  --login.html
+  --search.html
+--main.py
