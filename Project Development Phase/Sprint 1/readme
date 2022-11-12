@@ -1,1 +1,6 @@
-
+Sprint 1 Tasks:
+1. Front-End Rendering for login, signup, homepage, search for flights pages using HTML,CSS, JS - in templates and static folders
+2. Database maintaintance for logged in users in MySQL
+3. Backend Integration using Flask - main.py
+4. Dataset Collection - flight_features_final.csv
+5. Dataset Preprocessing - Flight_delay_Preprocessing.ibynb
