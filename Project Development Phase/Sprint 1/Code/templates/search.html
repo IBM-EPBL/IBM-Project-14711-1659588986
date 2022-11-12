@@ -1,0 +1,59 @@
+<html>
+    <head>
+      <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='styles/search_style.css') }}">
+    </head>
+    <body>
+      <section ng-show="success_message" class="flash_message success">
+        <p>User Successfully Logged in!</p>
+    </section>
+    <div class="wrapper">
+      <div class="title-text">
+        <div class="title login">Search using Flight No.</div>
+        <div class="title signup">Search using Source & Destination</div>  
+      </div>
+      <div class="form-container">
+        <div class="slide-controls">
+          <input type="radio" name="slide" id="login" checked>
+          <input type="radio" name="slide" id="signup">
+          <label for="login" class="slide login">Flight No.</label>
+          <label for="signup" class="slide signup">Src & Destination</label>
+          <div class="slider-tab"></div>
+        </div>
+        <div class="form-inner">
+          <form action="check.php" method="post" class="login">
+            <div class="field">
+              <input name="flightno" type="alphanumeric" placeholder="Flight Number" required>
+            </div>
+            <div class="field btn">
+              <div class="btn-layer"></div>
+              <input type="submit" value="Search">
+            </div>
+          </form>
+          <form action="checksd.php" method="post" class="signup">
+          <select name="src" class="field">
+              <option value="" disabled selected>Source</option>
+              <option value="ATL">ATL</option>
+              <option value="DTW">DTW</option>
+              <option value="SEA">SEA</option>
+              <option value="MSP">MSP</option>
+              <option value="JFK">JFK</option>
+          </select>
+            <select name="dest" class="field">
+              <option value="" disabled selected>Destination</option>
+              <option value="ATL">ATL</option>
+              <option value="DTW">DTW</option>
+              <option value="SEA">SEA</option>
+              <option value="MSP">MSP</option>
+              <option value="JFK">JFK</option>
+            </select>
+            <div class="field btn">
+              <div class="btn-layer"></div>
+              <input type="submit" value="Search">
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+    <script type=text/javascript src="{{ url_for('static', filename='js/searchj.js') }}"></script>
+</body>
+</html>
