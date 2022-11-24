@@ -1,4 +1,5 @@
 Sprint 2 tasks:
-  - User Confirmation
-  - Login via Google
-  - User Dashboard
+  - User Confirmation - under regiser() in main.py
+  - Login via Google  - under google(), google_auth() in main.py
+  - User Dashboard - home.html, profile.html
+  - Searching for flights - searchflight.html, searchsd.html
