@@ -1,0 +1,19 @@
+{% extends 'layout.html' %}
+
+{% block title %}Home{% endblock %}
+
+{% block content %}
+<div class="home">
+<h2>Welcome to SunWing, {{ username }}!</h2><br><br>
+<p>You can search for your flight's delay by using the following buttons</p>
+<br>
+<div class="links">
+    <center>
+    <a href="{{ url_for('searchflight') }}" class="active">Search using<br> Flight Number</a>
+    <a href="{{ url_for('searchsd') }}">Search using Source and<br>  Destination Airports</a>
+    <a href="{{ url_for('predict') }}">Predict the delay<br> for a given flight</a>
+</center>
+<br><br>
+</div>
+</div>
+{% endblock %}

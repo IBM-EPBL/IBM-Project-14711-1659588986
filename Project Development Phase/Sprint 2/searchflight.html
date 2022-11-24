@@ -1,0 +1,25 @@
+{% extends 'layout.html' %}
+
+{% block title %}Search{% endblock %}
+
+{% block content %}
+<div class="search">
+    <center>
+        <h2>Search using the Flight Number</h2>
+        <form action="{{ url_for('display') }}" method="post">
+            <label for="flightno">
+                <i class="fas fa-plane"></i>
+            </label>
+            <input type="varchar" name="flightno" placeholder="Flight Number" id="flightno" required>
+
+            <label for="tailno">
+                <i class="fas fa-plane"></i>
+            </label>
+            <input type="varchar" name="tailno" placeholder="Tail Number" id="tailno" required>
+
+            <div class="msg">{{ msg }}</div>
+            <input type="submit" value="Search">
+        </form>
+    </center>
+</div>
+{% endblock %}
