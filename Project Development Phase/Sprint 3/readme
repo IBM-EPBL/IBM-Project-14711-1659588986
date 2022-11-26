@@ -1,1 +1,8 @@
-
+Sprint 3:
+  - Predict time delay: under predict(), result() in main.py
+  - Flight details database saved by flightdata.sql
+  - Predicting and displaying delay in predict.html, result.html
+  - Templates for layout.html(the parent page for including nav bar)
+  - User Logout: under logout() in main.py
+  - Displaying searched flight results under display(), display2() in main.py
+  - Display.html: to show the details about the searched flights.
