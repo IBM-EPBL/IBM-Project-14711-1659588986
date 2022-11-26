@@ -1,0 +1,199 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700&display=swap');
+ * {
+	 margin: 0;
+	 padding: 0;
+	 box-sizing: border-box;
+}
+ body {
+	 font-family: 'Poppins', sans-serif;
+	 background-color: #004080;
+	 width: 100%;
+	 height: 100vh;
+	 display: flex;
+	 flex-direction: column;
+	 align-items: center;
+}
+ header#desktop-header {
+	 width: 60%;
+	 height: 100px;
+	 display: flex;
+	 justify-content: center;
+	 align-items: center;
+	 justify-content: space-between;
+}
+ header#desktop-header .header-img a {
+	 width: 100%;
+	 height: 100%;
+	 display: grid;
+	 place-items: center;
+}
+ header#desktop-header .header-img a img {
+	 width: 100%;
+}
+ header#desktop-header nav {
+	 display: flex;
+	 justify-content: center;
+	 align-items: center;
+	 justify-content: space-between;
+	 column-gap: 120px;
+}
+ header#desktop-header nav ul {
+	 list-style-type: none;
+	 display: flex;
+	 justify-content: center;
+	 align-items: center;
+	 column-gap: 30px;
+}
+ header#desktop-header nav ul li a {
+	 color: #fff;
+	 text-decoration: none;
+}
+ header#desktop-header nav ul:nth-of-type(2) {
+	 column-gap: 20px;
+}
+ header#desktop-header nav ul:nth-of-type(2) li a {
+	 background-color: #e9dcff;
+	 padding: 8px 15px;
+	 border-radius: 8px;
+	 color: #004080;
+	 font-weight: 600;
+}
+ header#desktop-header .header-btn {
+	 display: none;
+	 cursor: pointer;
+	 text-align: center;
+}
+ header#desktop-header .header-btn img {
+	 width: 80%;
+}
+ main {
+	 width: 60%;
+	 height: calc(100vh - 100px);
+}
+ main section.home {
+	 width: 100%;
+	 height: 100%;
+	 display: flex;
+	 justify-content: center;
+	 align-items: center;
+	 justify-content: space-between;
+}
+ main section.home .home-content {
+	 width: 45%;
+	 height: 100%;
+	 display: flex;
+	 justify-content: center;
+	 align-items: center;
+	 flex-direction: column;
+	 align-items: flex-start;
+	 row-gap: 12px;
+}
+ main section.home .home-content h1 {
+	 color: white;
+	 text-transform: uppercase;
+	 font-size: 50px;
+	 font-weight: 1000;
+	 letter-spacing: 1.5px;
+	 font-style: bold;
+}
+ main section.home .home-content h2 {
+	 color: #fff;
+	 opacity: 0.7;
+	 text-transform: capitalize;
+	 font-size: 30px;
+	 font-weight: 600;
+	 letter-spacing: 1px;
+}
+ main section.home .home-content a {
+	 margin-top: 15px;
+	 text-decoration: none;
+	 background-color: #e9dcff;
+	 padding: 8px 15px;
+	 border-radius: 8px;
+	 color: #004080;
+	 font-weight: 600;
+	 display: flex;
+	 justify-content: center;
+	 align-items: center;
+	 column-gap: 8px;
+}
+ main section.home .home-content a img {
+	 width: 14px;
+	 transform: translate(0px, 0px);
+	 transition: transform 0.4s linear;
+}
+ main section.home .home-content a:hover img {
+	 transform: translate(0px, 5px);
+}
+ main section.home .home-img {
+	 width: 45%;
+	 height: 100%;
+	 background: url(./../img/flight2.png);
+	 background-repeat: no-repeat;
+	 background-size: contain;
+	 background-position: center;
+}
+ @media screen and (max-width: 1600px) {
+	 header#desktop-header {
+		 width: 70%;
+	}
+	 main {
+		 width: 70%;
+	}
+}
+ @media screen and (max-width: 1440px) {
+	 header#desktop-header {
+		 width: 80%;
+	}
+	 main {
+		 width: 80%;
+	}
+}
+ @media screen and (max-width: 1024px) {
+	 header#desktop-header {
+		 width: 90%;
+	}
+	 main {
+		 width: 90%;
+	}
+}
+ @media screen and (max-width: 900px) {
+	 body {
+		 height: auto;
+	}
+	 header#desktop-header {
+		 height: 70px;
+	}
+	 header#desktop-header .header-img a img {
+		 width: 90%;
+	}
+	 header#desktop-header nav {
+		 display: none;
+	}
+	 header#desktop-header .header-btn {
+		 display: block;
+	}
+	 main {
+		 height: auto;
+	}
+	 main section.home {
+		 flex-direction: column;
+	}
+	 main section.home .home-content {
+		 width: 100%;
+		 height: auto;
+		 padding: 35px 0px 30px 0px;
+	}
+	 main section.home .home-img {
+		 width: 100%;
+		 height: 520px;
+		 background-position: center;
+	}
+}
+ @media screen and (max-width: 425px) {
+	 main section.home .home-img {
+		 background-position: 0px;
+		 background-size: cover;
+	}
+}
+ 
