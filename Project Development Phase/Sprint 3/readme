@@ -6,3 +6,4 @@ Sprint 3:
   - User Logout: under logout() in main.py
   - Displaying searched flight results under display(), display2() in main.py
   - Display.html: to show the details about the searched flights.
+  - style.css: the overall stylesheet
