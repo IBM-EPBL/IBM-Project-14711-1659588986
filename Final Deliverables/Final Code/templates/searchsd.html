@@ -1,0 +1,39 @@
+{% extends 'layout.html' %}
+
+{% block title %}Search{% endblock %}
+
+{% block content %}
+<div class="search">
+    <center>
+        <h2>Search using the Flight's Source and Destination</h2>
+        <form action="{{ url_for('display2') }}" method="post">
+            <label for="src">
+                <i class="fas fa-map-marked"></i>
+            </label>
+            <select name="src" id="src">
+                <option value="" disabled selected>Select Source Airport</option>
+                <option value="ATL">ATL</option>
+                <option value="DTW">DTW</option>
+                <option value="JFK">JFK</option>
+                <option value="MSP">MSP</option>
+                <option value="SEA">SEA</option>
+            </select>
+
+            <label for="dest">
+                <i class="fas fa-map-marked"></i>
+            </label>
+            <select name="dest" id="dest">
+                <option value="" disabled selected>Select Destination Airport</option>
+                <option value="ATL">ATL</option>
+                <option value="DTW">DTW</option>
+                <option value="JFK">JFK</option>
+                <option value="MSP">MSP</option>
+                <option value="SEA">SEA</option>
+            </select>
+
+            <div class="msg">{{ msg }}</div>
+            <input type="submit" value="Search">
+        </form>
+    </center>
+</div>
+{% endblock %}

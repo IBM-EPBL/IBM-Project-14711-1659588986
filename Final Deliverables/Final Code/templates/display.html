@@ -1,0 +1,42 @@
+{% extends 'layout.html' %}
+
+{% block title %}Display{% endblock %}
+
+{% block content %}
+<center>
+<table id="flightdetails" class="zz">
+    <br><br>
+    <thead>
+      <tr>
+        <th>Flight Number</th>
+        <th>Tail Number</th>
+        <th>Origin</th>
+        <th>Destination</th>
+        <th>Day Of Month</th>
+        <th>Month </th>
+        <th>Year</th>
+        <th>Day of Week</th>
+        <th>Departure Time</th>
+        <th>Arrival Time</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for d in data %}
+        <tr>
+          <td>{{ d.fl_num }}</td>
+          <td>{{ d.tail_num }}</td>  
+          <td>{{ d.origin }}</td>
+          <td>{{ d.dest }}</td>
+          <td>{{ d.day_of_month }}</td>
+          <td>{{ d.month }}</td>
+          <td>{{ d.year }}</td>
+          <td>{{ d.day_of_week }}</td>
+          <td>{{ d.dep_time }}</td>
+          <td>{{ d.arr_time }}</td>
+        </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+  <br><br><br><br><br><br>
+</center>
+{% endblock %}

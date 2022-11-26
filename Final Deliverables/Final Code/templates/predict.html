@@ -1,0 +1,78 @@
+{% extends 'layout.html' %}
+
+{% block title %}Search{% endblock %}
+
+{% block content %}
+<div class="search">
+    <center>
+        <h2>Enter Flight Details</h2>
+        <form action="{{ url_for('predict') }}" method="post">
+            <label for="flightno">
+                <i class="fas fa-plane"></i>
+            </label>
+            <input type="varchar" name="flightno" placeholder="Flight Number" id="flightno" required>
+
+            <label for="tailno">
+                <i class="fas fa-plane"></i>
+            </label>
+            <input type="varchar" name="tailno" placeholder="Tail Number" id="tailno" required>
+            
+            <label for="src">
+                <i class="fas fa-map-marked"></i>
+            </label>
+            <select name="src" id="src">
+                <option value="" disabled selected>Select Source Airport</option>
+                <option value="0">ATL</option>
+                <option value="3">DTW</option>
+                <option value="2">JFK</option>
+                <option value="1">MSP</option>
+                <option value="4">SEA</option>
+            </select>
+
+            <label for="dest">
+                <i class="fas fa-map-marked"></i>
+            </label>
+            <select name="dest" id="dest">
+                <option value="" disabled selected>Select Destination Airport</option>
+                <option value="0">ATL</option>
+                <option value="3">DTW</option>
+                <option value="2">JFK</option>
+                <option value="1">MSP</option>
+                <option value="4">SEA</option>
+            </select>
+
+            <label for="dates">
+                <i class="fas fa-calendar-alt"></i>
+            </label>
+            <input type="date" name="dates" min="2016-01-01" max="2016-12-31">
+
+            <label for="weekday">
+                <i class="fas fa-calendar-alt"></i>
+            </label>
+            <select name="weekday" id="weekday">
+                <option value="" disabled selected>Select day of the week</option>
+                <option value="1">Sunday</option>
+                <option value="2">Monday</option>
+                <option value="3">Tuesday</option>
+                <option value="4">Wednesday</option>
+                <option value="5">Thursday</option>
+                <option value="6">Friday</option>
+                <option value="7">Saturday</option>
+            </select>
+
+            <label for="deptime">
+                <i class="fas fa-clock"></i>
+            </label>
+            <input type="varchar" name="deptime" placeholder="Departure Time in HHMM format" id="deptime" required>
+
+            <label for="arrtime">
+                <i class="fas fa-clock"></i>
+            </label>
+            <input type="varchar" name="arrtime" placeholder="Arrival Time in HHMM format" id="arrtime" required>
+
+            <div class="msg">{{ msg }}</div>
+            <input type="submit" value="Predict">
+        </form>
+    </center>
+</div>
+{% endblock %}

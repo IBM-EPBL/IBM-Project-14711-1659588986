@@ -1,0 +1,16 @@
+{% extends 'layout.html' %}
+
+{% block title %}Result{% endblock %}
+
+{% block content %}
+<br><br>
+<div class="result">
+<br><br>
+{% if data > 0 %}
+    <div class ="rr"> Flight gets delayed by {{"%.2f"|format(data)}} minutes</div>
+{% else %}
+<div class = "rr"> Flight arrives on time</div>
+{% endif %}
+<br><br>
+</div>
+{% endblock %}
